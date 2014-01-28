@@ -513,11 +513,11 @@ void show_wipe_menu() //Carliv improvement
 								NULL
     };
 
-    char* list[] = { "Wipe All Data - Preflash",
-                            "Wipe Data - Factory Reset",
-                            "Wipe Cache",
-                            "Wipe Dalvik Cache",	 	 
-                             NULL
+    char* list[] = { "Wipe Data - Factory Reset",
+                     "Wipe Cache",
+                     "Wipe Dalvik Cache",
+				 	 "Wipe All Data - Preflash",	 
+                      NULL
     };
 
     for (;;)
@@ -527,19 +527,19 @@ void show_wipe_menu() //Carliv improvement
             break;
 		switch (chosen_item)
         	{
-			case 0:
-                wipe_all(0);
-				break;
-             case 1:
+             case 0:
 				wipe_data(ui_text_visible());
                 if (!ui_text_visible()) return;
                 break;   
-             case 2:
+             case 1:
                 erase_cache(NULL);
                 break;  
-             case 3:
+             case 2:
                 erase_dalvik_cache(NULL);
                 break;
+			case 3:
+                wipe_all(0);
+				break;
         }
     }
     

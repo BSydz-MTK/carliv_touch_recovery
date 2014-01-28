@@ -43,8 +43,16 @@ RECOVERY_VERSION_INFO := MTK CWM-based v6.0.4.4
 
 RECOVERY_VERSION := $(RECOVERY_NAME)
 # Please leave this in place if you use my source to build. Add a new line on recovery.c at "ui_prints" with your name, like "compiled by .... for phone". Thank you!
+# Add your version info here.
+RECOVERY_VERSION_EXTRA :=
+# Add your extra custom info here.
+RECOVERY_VERSION_EXTRA2 := Thank You Carliv
+
 LOCAL_CFLAGS += -DRECOVERY_VERSION="$(RECOVERY_VERSION)"
 LOCAL_CFLAGS += -DRECOVERY_VERSION_INFO="$(RECOVERY_VERSION_INFO)"
+LOCAL_CFLAGS += -DRECOVERY_VERSION_EXTRA="$(RECOVERY_VERSION_EXTRA)"
+LOCAL_CFLAGS += -DRECOVERY_VERSION_EXTRA2="$(RECOVERY_VERSION_EXTRA2)"
+
 RECOVERY_API_VERSION := 2
 LOCAL_CFLAGS += -DRECOVERY_API_VERSION=$(RECOVERY_API_VERSION)
 

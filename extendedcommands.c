@@ -1829,7 +1829,7 @@ void show_advanced_menu()
     };
 
     static char* list[] = { "Reboot Recovery",
-                            "Reboot in Download",
+                            "Reboot to Bootloader",
                             "Report error",
                             "Key test",
                             "Show log",

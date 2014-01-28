@@ -1213,6 +1213,8 @@ main(int argc, char **argv) {
     ui_init();
     ui_print(EXPAND(RECOVERY_VERSION)"\n");
     ui_print(EXPAND(RECOVERY_VERSION_INFO)"\n");
+    ui_print(EXPAND(RECOVERY_VERSION_EXTRA)"\n");
+    ui_print(EXPAND(RECOVERY_VERSION_EXTRA2)"\n");
     load_volume_table();
     process_volumes();
     LOGI("Processing arguments.\n");
